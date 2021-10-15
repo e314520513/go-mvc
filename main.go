@@ -8,5 +8,5 @@ import(
 	// "gomvc/models"
 )
 func main(){
-	routers.router()
+	routers.Router()
 }

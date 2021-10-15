@@ -2,6 +2,6 @@ package routers
 import(
 	"fmt"
 )
-func router(){
+func Router(){
 	fmt.Println("invoking router");
 }
