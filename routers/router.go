@@ -1,7 +1,14 @@
 package routers
 import(
-	"fmt"
+	"net/http"
+	"log"
+	"gomvc/controllers"
 )
 func Router(){
-	fmt.Println("invoking router");
+
+	http.HandleFunc("/",controllers.Home)
+
+	if err:= http.ListenAndServe(":9090",nil); err!=nil{
+		log.Fatal("ListenAndServe: ",err)
+	}
 }
