@@ -6,7 +6,11 @@ import(
 )
 func main(){
 	modelName := os.Args[1]
-	models.$modelName()
+	StubStorage := map[string]interface{}{
+		"funcA": modelName,
+	}
+	fmt.Println(StubStorage["funcA"])
+	// models.$modelName()
 
 	
 }
