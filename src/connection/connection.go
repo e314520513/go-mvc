@@ -40,7 +40,7 @@ func ConnectDatabase() *gorm.DB{
 	db.SetMaxIdleConns(MaxIdleConns)
 	db.SetMaxOpenConns(MaxOpenConns)
 
-	return &conn
+	return conn
 	
 	
 }
