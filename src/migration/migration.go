@@ -1,7 +1,8 @@
 package main
 
 import(
-	"gomvc/models"
+	// "gomvc/models"
+	"fmt"
 	"os"
 )
 func main(){
