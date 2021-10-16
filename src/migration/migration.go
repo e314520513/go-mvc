@@ -2,9 +2,12 @@ package main
 
 import(
 	"fmt"
-	"gomvc/connection"
+	"gomvc/migration"
+	"os"
 )
 func main(){
-	connection.ConnectDatabase()
-	fmt.Println("connected")
+	modelName := os.Args[1]
+	migration.{modelName}()
+
+	
 }
