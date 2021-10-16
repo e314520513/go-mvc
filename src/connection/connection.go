@@ -29,6 +29,14 @@ func ConnectDatabase(){
 	}
 
 
-
+	//設定ConnMaxLifetime/MaxIdleConns/MaxOpenConns
+	db, err1 := conn.DB()
+	if err1 != nil {
+		fmt.Println("get db failed:", err)
+		return
+	}
+	db.SetConnMaxLifetime(time.Duration(MaxLifetime) * time.Second)
+	db.SetMaxIdleConns(MaxIdleConns)
+	db.SetMaxOpenConns(MaxOpenConns)	
 	
 }
