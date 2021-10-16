@@ -7,7 +7,7 @@ import(
 )
 func main(){
 	modelName := os.Args[1]
-	migration.{modelName}()
+	migration.$modelName()
 
 	
 }
