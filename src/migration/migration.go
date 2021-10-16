@@ -1,6 +1,7 @@
 package main
 
 import(
+	"gomvc/models"
 	"os"
 )
 func main(){
