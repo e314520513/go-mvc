@@ -36,7 +36,7 @@ func ConnectDatabase(){
 		fmt.Println("get db failed:",err)
 	}
 
-
+	
 	//設定ConnMaxLifetime/MaxIdleConns/MaxOpenConns
 	db, err1 := conn.DB()
 	if err1 != nil {
