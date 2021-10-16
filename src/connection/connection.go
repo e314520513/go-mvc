@@ -19,7 +19,7 @@ const(
 )
 
 
-func ConnectDatabase(){
+func ConnectDatabase() *gorm.DB{
 	//組合sql連線字串
 	addr := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True",UserName,Password,Addr,Port,Database)
 	//連接mysql
@@ -39,6 +39,8 @@ func ConnectDatabase(){
 	db.SetConnMaxLifetime(time.Duration(MaxLifetime) * time.Second)
 	db.SetMaxIdleConns(MaxIdleConns)
 	db.SetMaxOpenConns(MaxOpenConns)
+
+	return &conn
 	
 	
 }

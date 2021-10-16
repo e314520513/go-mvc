@@ -1,6 +1,8 @@
 package models
 
 import(
+	"time"
+	"fmt"
 	"gomvc/connection"
 )
 type User struct {
@@ -13,7 +15,7 @@ type User struct {
 }
 
 func Users(){
-	connection.ConnectDatabase()
+	conn :=connection.ConnectDatabase()
 	//產生table
 	conn.Debug().AutoMigrate(&User{})
 	//判斷有沒有table存在
