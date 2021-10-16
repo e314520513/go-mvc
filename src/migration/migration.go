@@ -11,7 +11,7 @@ func main(){
 	StubStorage := map[string]interface{}{
 		"funcA": modelName,
 	}
-	f := reflect.ValueOf(StubStorage["funcA"])
+	f := StubStorage["funcA"]
 	fmt.Println(reflect.TypeOf(f))
 	// models.$modelName()
 
