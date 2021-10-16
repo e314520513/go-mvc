@@ -2,7 +2,7 @@ package main
 
 import(
 	"fmt"
-	"gomvc/migration"
+	"gomvc/models"
 	"os"
 )
 func main(){
