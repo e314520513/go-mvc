@@ -34,7 +34,7 @@ func ConnectDatabase() *gorm.DB{
 	db, err1 := conn.DB()
 	if err1 != nil {
 		fmt.Println("get db failed:", err)
-		return
+		return conn
 	}
 	db.SetConnMaxLifetime(time.Duration(MaxLifetime) * time.Second)
 	db.SetMaxIdleConns(MaxIdleConns)
