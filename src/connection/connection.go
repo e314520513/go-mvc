@@ -28,9 +28,6 @@ func ConnectDatabase(){
 	if err != nil {
 		fmt.Println("get db failed:",err)
 	}
-	db.SetConnMaxLifetime(time.Duration(MaxLifetime) * time.Second)
-	db.SetMaxIdleConns(MaxIdleConns)
-	db.SetMaxOpenConns(MaxOpenConns)
 
 
 
