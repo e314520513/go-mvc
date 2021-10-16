@@ -13,7 +13,7 @@ type User struct {
 	CreatedAt time.Time `gorm:"type:timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" json:"created_at,omitempty"`
 	UpdatedAt time.Time `gorm:"type:timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" json:"updated_at,omitempty"`
 }
-
+funcs := map[string]interface{}{"Users":Users}
 func Users(){
 	conn :=connection.ConnectDatabase()
 	//產生table

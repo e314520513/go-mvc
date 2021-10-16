@@ -1,19 +1,16 @@
 package main
 
 import(
-	// "gomvc/models"
 	"fmt"
 	"os"
 	"reflect"
+	"gomvc/models"
 )
 func main(){
 	modelName := os.Args[1]
-	StubStorage := map[string]interface{}{
-		"funcA": modelName,
-	}
-	f := StubStorage["funcA"]
-	fmt.Println(reflect.TypeOf(f))
-	// models.$modelName()
+	
+	
+	models.funcs[modelName]
 
 	
 }
