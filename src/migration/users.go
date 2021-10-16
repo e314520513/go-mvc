@@ -1,7 +1,7 @@
 package migration
 
 import(
-	connection.ConnectDatabase()
+	"gomvc/connection"
 )
 type User struct {
 	ID        int64     `gorm:"type:bigint(20) NOT NULL auto_increment;primary_key;" json:"id,omitempty"`
