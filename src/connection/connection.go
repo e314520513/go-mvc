@@ -1,6 +1,8 @@
 package connection
 
 import ( 
+	"fmt"
+	"time"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -21,7 +23,7 @@ func ConnectDatabase(){
 	//組合sql連線字串
 	addr := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True",UserName,Password,Addr,Port,Database)
 	//連接mysql
-	database, err := gorm.Open(mysql.Open(addr), &gorm.Config{})
+	db, err := gorm.Open(mysql.Open(addr), &gorm.Config{})
 
 	if err != nil {
 		fmt.Println("get db failed:",err)
