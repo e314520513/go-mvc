@@ -12,7 +12,7 @@ func main(){
 		"funcA": modelName,
 	}
 	f := reflect.ValueOf(StubStorage["funcA"])
-	f.call()
+	fmt.Println(f)
 	// models.$modelName()
 
 	
